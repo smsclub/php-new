@@ -66,7 +66,7 @@ $sms
     ->setOriginator(new \SmsclubApi\Classes\Originator('InetShop'))
     // Устанавливаем номера получателей
     // Если получатель один, следует указывать один елемент массива
-    ->setPhones(['380990244671', '380938226388'])
+    ->setPhones(['380123456789', '380123456780'])
      // Устанавливаем текст сообщения
     ->setMessage('Message text')
 
@@ -96,7 +96,7 @@ $viberMessage
     ->setOriginator(new \SmsclubApi\Classes\Originator('InetShop'))
     // Устанавливаем номера получателей
     // Если получатель один, следует указывать один елемент массива
-    ->setPhones(['380990244671', '380938226388'])
+    ->setPhones(['380123456789', '380123456780'])
      // Устанавливаем текст сообщения
     ->setMessage('Message text');
 
