@@ -137,8 +137,6 @@ class ApiService implements ApiServiceInterface
         $client = new ViberClient($this->credentials);
         $response = $client->sendMessage(json_encode($data));
 
-        var_dump($response);
-
         if (isset($response['errorRequest'])) {
             $this->setErrors($response);
             return false;
