@@ -116,7 +116,20 @@ class ApiService implements ApiServiceInterface
      */
     public function getViberOriginators()
     {
+        $client = new ViberClient($this->credentials);
+        $response = $client->getOriginators();
 
+        if (isset($response['errorRequest'])) {
+            $this->setErrors($response);
+            return false;
+        }
+
+        $result = [];
+        foreach ($response['successfulRequest']['requestData'] as $originator) {
+            $result[] = new Originator($originator);
+        }
+
+        return $result;
     }
 
     /**

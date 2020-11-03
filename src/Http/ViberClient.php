@@ -48,6 +48,16 @@ class ViberClient extends Client
     }
 
     /**
+     * @return bool|string
+     */
+    public function getOriginators()
+    {
+        return $this->request->url(VIBER_API_URL . '/originator')
+            ->returnTransfer()
+            ->execute();
+    }
+
+    /**
      * @return string
      * @throws \Exception
      */
