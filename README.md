@@ -112,6 +112,25 @@ if ($result) {
     }
 }
 ```
+
+#### Получение списака Альфа-имен для отправки Viber сообщений
+Для получения спсиска Альфа-имен необходимо вызвать метод ```$api->getViberOriginators();```. В ответ вернется массив объектов интерфейса ```OriginatorInterface``` или ```false``` в случае ошибки.
+
+**Пример:** 
+```php
+$originators = $api->getViberOriginators();
+
+if ($originators) {
+    foreach($originators as $originator) {
+        // Получить ID отправителя
+        var_dump($originator->getId());   
+        
+        // Получить имя отправителя
+        var_dump($originator->getName());  
+    }
+}
+```
+
 ### Получение статусов
 #### Константы статусов и их описание
 Для сверки статусов рекомендуется использовать константы класса `StatusHandler`:
