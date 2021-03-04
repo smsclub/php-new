@@ -1,0 +1,17 @@
+{
+    "name": "smsclub/php-new",
+    "description": "Класс для работы с API SMS Club",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dev",
+            "email": "technical@smsclub.mobi"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "~5.4|~7.0",
+        "ext-curl": "*"
+    }
+}
